@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1744727754605174}
   m_LocalRotation: {x: -0.505962, y: 0.8622207, z: -0.012167878, w: -0.020735543}
-  m_LocalPosition: {x: 3.63, y: 4.91, z: -6.6828065}
+  m_LocalPosition: {x: 7.97, y: -7.23, z: -6.6828065}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,6 +112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfd515a84b0b87459b17c4dbad9a19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newExplosion: {fileID: 0}
+  explosionEffect: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 2}
+  movementSpeed: 0.7
+  earth: {fileID: 0}
+  aManager: {fileID: 0}
 --- !u!135 &135266981494100242
 SphereCollider:
   m_ObjectHideFlags: 1
