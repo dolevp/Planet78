@@ -19,11 +19,12 @@ public class Asteroid : MonoBehaviour {
 		if (col.gameObject.tag == "Earth") {
 
 
-			newExplosion = Instantiate (explosionEffect, transform.position, Quaternion.identity);
+			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 3);
+
 			Instantiate (smokeEffect, transform.position, Quaternion.identity);
 
 			Destroy (gameObject);
-			StartCoroutine (WaitAndDestroy ());
+//			StartCoroutine (WaitAndDestroy ());
 
 
 
@@ -37,10 +38,10 @@ public class Asteroid : MonoBehaviour {
 		transform.position = Vector3.MoveTowards(transform.position, earth.position, movementSpeed * Time.deltaTime);
 	}
 
-	IEnumerator WaitAndDestroy(){
+	/*IEnumerator WaitAndDestroy(){
 
 		yield return new WaitForSeconds (3.5f);
 		Destroy (newExplosion);
 
-	}
+	}*/
 }

@@ -11,7 +11,7 @@ public class AttackManager : MonoBehaviour {
 	public GameObject newAsteroid;
 	public GameObject oldAsteroid;
 	public Transform earth;
-	public float intervalBetweenAttacks = 2f;
+	public float intervalBetweenAttacks = 5f;
 	bool isAttacking = false;
 
 	// Use this for initialization
