@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AttackManager : MonoBehaviour {
 
@@ -30,6 +31,12 @@ public class AttackManager : MonoBehaviour {
 
 
 		
+	}
+
+	public void AddScore(){
+
+
+
 	}
 
 	IEnumerator Attack(){

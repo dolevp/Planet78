@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Earth : MonoBehaviour {
 
+	public int health = 8;
 	public Slider healthSlider;
-	public GameObject fillColor;
+	public Image sliderImage;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,9 +15,15 @@ public class Earth : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 
+		health--;
 		healthSlider.value--;
-		if(healthSlider.value <=3)
-			fillColor.
+		if (health <= 3)
+			sliderImage.color = Color.red;
+		
+		if (health <= 0)
+			//Explode
+			Destroy(gameObject);
+		
 
 	}
 	

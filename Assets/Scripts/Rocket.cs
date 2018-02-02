@@ -7,6 +7,7 @@ public class Rocket : MonoBehaviour {
 
 	public GameObject explosionPrefab;
 	public Transform rocketTarget;
+	public AttackManager aManager;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,7 @@ public class Rocket : MonoBehaviour {
 		Destroy (Instantiate (explosionPrefab, transform.position, Quaternion.identity), 3);
 		Destroy (col.gameObject);
 		Destroy (gameObject);
-
+		aManager.AddScore ();
 
 	}
 	// Update is called once per frame

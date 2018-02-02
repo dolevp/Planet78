@@ -42,6 +42,8 @@ public class Asteroid : MonoBehaviour {
 		newRocket.GetComponent<Rocket> ().rocketTarget = transform;
 		//set the explosion effect variable
 		newRocket.GetComponent<Rocket> ().explosionPrefab = explosionEffect;
+		//set attackmanager variable
+		newRocket.GetComponent<Rocket>().aManager = aManager;
 
 
 	}
@@ -49,7 +51,10 @@ public class Asteroid : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = Vector3.MoveTowards(transform.position, earth.position, movementSpeed * Time.deltaTime);
+		if (earth != null)
+			transform.position = Vector3.MoveTowards (transform.position, earth.position, movementSpeed * Time.deltaTime);
+		else
+			Destroy (gameObject);
 
 
 	}
