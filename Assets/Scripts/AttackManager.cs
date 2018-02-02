@@ -16,6 +16,7 @@ public class AttackManager : MonoBehaviour {
 	bool isAttacking = false;
 	public Text scoreText;
 	public int score = 0;
+	public bool gameOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,9 @@ public class AttackManager : MonoBehaviour {
 			StartCoroutine (Attack ());
 
 
+		if (gameOver)
+			Destroy (gameObject);
+
 		
 	}
 
@@ -46,34 +50,37 @@ public class AttackManager : MonoBehaviour {
 
 	IEnumerator Attack(){
 
-		isAttacking = true;
+		if (!gameOver) {
+			isAttacking = true;
 
-		int randX = Random.Range (-10, 12);
-		int randY = Random.Range (5, 15);
-		int randZ = Random.Range (-9, -13);
+			int randX = Random.Range (-10, 12);
+			int randY = Random.Range (5, 15);
+			int randZ = Random.Range (-9, -13);
 
-		Vector3 spawnPosition = new Vector3 (randX, randY, randZ);
+			Vector3 spawnPosition = new Vector3 (randX, randY, randZ);
 
-		newAsteroid = Instantiate (asteroidPrefab, spawnPosition, Quaternion.identity);
-		oldAsteroid = newAsteroid;
-		Asteroid asteroid = newAsteroid.GetComponent<Asteroid> ();
-		newFire = Instantiate (fireEffect, newAsteroid.transform.position, Quaternion.identity);
-		newFire.transform.SetParent (newAsteroid.transform);
-		//set asteroid variables
-		asteroid.earth = earth;
-		asteroid.spawnPosition = rocketSpawn;
-		asteroid.explosionEffect = smallExplosion;
-		asteroid.smokeEffect = smokeEffect;
-		asteroid.aManager = GetComponent<AttackManager> ();
-		//end
-		Physics.IgnoreCollision(newAsteroid.GetComponent<SphereCollider>(),oldAsteroid.GetComponent<SphereCollider>());
+			newAsteroid = Instantiate (asteroidPrefab, spawnPosition, Quaternion.identity);
+			oldAsteroid = newAsteroid;
+			Asteroid asteroid = newAsteroid.GetComponent<Asteroid> ();
+			newFire = Instantiate (fireEffect, newAsteroid.transform.position, Quaternion.identity);
+			newFire.transform.SetParent (newAsteroid.transform);
+			//set asteroid variables
+			asteroid.earth = earth;
+			asteroid.spawnPosition = rocketSpawn;
+			asteroid.explosionEffect = smallExplosion;
+			asteroid.smokeEffect = smokeEffect;
+			asteroid.aManager = GetComponent<AttackManager> ();
+			//end
+			Physics.IgnoreCollision (newAsteroid.GetComponent<SphereCollider> (), oldAsteroid.GetComponent<SphereCollider> ());
 
 //		navAgent = newAsteroid.GetComponent<NavMeshAgent> ();
 //		navAgent.SetDestination (earth.position);
 
-		yield return new WaitForSeconds (intervalBetweenAttacks);
+			yield return new WaitForSeconds (intervalBetweenAttacks);
 
-		isAttacking = false;
+			isAttacking = false;
+
+		} 
 
 
 	}

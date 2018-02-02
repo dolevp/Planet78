@@ -7,8 +7,10 @@ public class Earth : MonoBehaviour {
 
 	public int health = 8;
 	public Slider healthSlider;
+	public Text restartText, startText, scoreFinishedText;
 	public Image sliderImage;
 	public GameObject panel;
+	public AttackManager aManager;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,17 +23,20 @@ public class Earth : MonoBehaviour {
 		if (health <= 2)
 			sliderImage.color = Color.red;
 		
-		if (health <= 0)
+		if (health <= 0) {
 			//Explode
-			Destroy(gameObject);
+			aManager.gameOver = true;
+			gameObject.SetActive(false);
 		
+			Time.timeScale = 0;
+			panel.SetActive (true);
+			startText.text = "destroyed";
+			restartText.gameObject.SetActive (true);
+			scoreFinishedText.gameObject.SetActive (true);
+			scoreFinishedText.text = "score: " + aManager.score;
 
-		panel.SetActive (true);
-		panel.GetComponentInChildren<Text> ().text = "destroyed";
+		}
 	}
 	
-	// Update is called once per frame
-	void Explode () {
-		
-	}
+
 }
