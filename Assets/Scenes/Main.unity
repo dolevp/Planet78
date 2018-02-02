@@ -1239,6 +1239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2047073830}
+  restartText: {fileID: 450442947}
+  startText: {fileID: 85658695}
+  scoreFinishedText: {fileID: 415482980}
   slider: {fileID: 280270570}
   aManager: {fileID: 758684552}
   earth: {fileID: 1838050301}
@@ -1531,9 +1534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 8
   healthSlider: {fileID: 280270572}
-  restartText: {fileID: 450442947}
-  startText: {fileID: 85658695}
-  scoreFinishedText: {fileID: 415482980}
   sliderImage: {fileID: 773828708}
   panel: {fileID: 1519210935}
   aManager: {fileID: 758684552}

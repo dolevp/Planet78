@@ -7,7 +7,6 @@ public class Earth : MonoBehaviour {
 
 	public int health = 8;
 	public Slider healthSlider;
-	public Text restartText, startText, scoreFinishedText;
 	public Image sliderImage;
 	public GameObject panel;
 	public AttackManager aManager;
@@ -30,10 +29,6 @@ public class Earth : MonoBehaviour {
 		
 			Time.timeScale = 0;
 			panel.SetActive (true);
-			startText.text = "destroyed";
-			restartText.gameObject.SetActive (true);
-			scoreFinishedText.gameObject.SetActive (true);
-			scoreFinishedText.text = "score: " + aManager.score;
 
 		}
 	}

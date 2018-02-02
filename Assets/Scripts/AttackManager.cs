@@ -20,7 +20,8 @@ public class AttackManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+
 
 
 	}
@@ -33,15 +34,15 @@ public class AttackManager : MonoBehaviour {
 			StartCoroutine (Attack ());
 
 
-		if (gameOver)
-			Destroy (gameObject);
 
 		
 	}
 
 	public void AddScore(){
 
+
 		score++;
+		PlayerPrefs.SetInt ("Score", score);
 		scoreText.text = "score: " + score;
 		intervalBetweenAttacks -= score / 92;
 
@@ -79,6 +80,7 @@ public class AttackManager : MonoBehaviour {
 			yield return new WaitForSeconds (intervalBetweenAttacks);
 
 			isAttacking = false;
+
 
 		} 
 
