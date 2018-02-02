@@ -430,6 +430,8 @@ MonoBehaviour:
   earth: {fileID: 1838050305}
   rocketSpawn: {fileID: 1316891862}
   intervalBetweenAttacks: 1.5
+  scoreText: {fileID: 2047073830}
+  score: 0
 --- !u!1 &773828706
 GameObject:
   m_ObjectHideFlags: 0

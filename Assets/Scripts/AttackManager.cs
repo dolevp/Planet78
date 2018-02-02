@@ -14,6 +14,8 @@ public class AttackManager : MonoBehaviour {
 	public Transform earth, rocketSpawn;
 	public float intervalBetweenAttacks = 5f;
 	bool isAttacking = false;
+	public Text scoreText;
+	public int score = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,9 @@ public class AttackManager : MonoBehaviour {
 
 	public void AddScore(){
 
+		score++;
+		scoreText.text = "score: " + score;
+		intervalBetweenAttacks -= score / 92;
 
 
 	}

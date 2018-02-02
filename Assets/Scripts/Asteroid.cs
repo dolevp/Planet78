@@ -18,10 +18,12 @@ public class Asteroid : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 
+		movementSpeed += aManager.score / 50;
+
 		if (col.gameObject.tag == "Earth") {
 
 
-			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 2);
+			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 1);
 
 			Instantiate (smokeEffect, transform.position, Quaternion.identity);
 
