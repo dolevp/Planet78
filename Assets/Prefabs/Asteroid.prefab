@@ -100,7 +100,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &114145390552258982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,10 +113,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newExplosion: {fileID: 0}
+  rocketPrefab: {fileID: 1029411247802944, guid: 80143da82c711934889b845fca535b6a,
+    type: 2}
   explosionEffect: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1,
     type: 2}
+  smokeEffect: {fileID: 0}
   movementSpeed: 0.7
   earth: {fileID: 0}
+  spawnPosition: {fileID: 0}
   aManager: {fileID: 0}
 --- !u!135 &135266981494100242
 SphereCollider:

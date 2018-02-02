@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour {
 
-	public GameObject newExplosion;
+	public GameObject newExplosion, newRocket, rocketPrefab;
+	public bool hasBeenDestroyed;
 	public GameObject explosionEffect, smokeEffect;
 	public float movementSpeed = 0.7f;
-	public Transform earth;
+	public Transform earth, spawnPosition;
 	public AttackManager aManager;
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 
+		hasBeenDestroyed = false;
 	}
 
 	void OnCollisionEnter(Collision col){
@@ -19,11 +21,12 @@ public class Asteroid : MonoBehaviour {
 		if (col.gameObject.tag == "Earth") {
 
 
-			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 3);
+			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 2);
 
 			Instantiate (smokeEffect, transform.position, Quaternion.identity);
 
 			Destroy (gameObject);
+			hasBeenDestroyed = true;
 //			StartCoroutine (WaitAndDestroy ());
 
 
@@ -31,11 +34,24 @@ public class Asteroid : MonoBehaviour {
 		}
 
 	}
-	
+
+	void OnMouseDown(){
+
+		newRocket = Instantiate (rocketPrefab, spawnPosition.position, rocketPrefab.transform.rotation);
+		//set the target variable
+		newRocket.GetComponent<Rocket> ().rocketTarget = transform;
+		//set the explosion effect variable
+		newRocket.GetComponent<Rocket> ().explosionPrefab = explosionEffect;
+
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 
 		transform.position = Vector3.MoveTowards(transform.position, earth.position, movementSpeed * Time.deltaTime);
+
+
 	}
 
 	/*IEnumerator WaitAndDestroy(){

@@ -169,10 +169,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.16490053, g: 0.6243931, b: 0.89705884, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.16470589, g: 0.62352943, b: 0.8980393, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 3
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -428,6 +428,7 @@ MonoBehaviour:
   newAsteroid: {fileID: 0}
   oldAsteroid: {fileID: 0}
   earth: {fileID: 1838050305}
+  rocketSpawn: {fileID: 1316891862}
   intervalBetweenAttacks: 1.5
 --- !u!1 &773828706
 GameObject:
@@ -762,6 +763,34 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1316891861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1316891862}
+  m_Layer: 0
+  m_Name: RocketSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316891862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316891861}
+  m_LocalRotation: {x: 0.7054356, y: 0.048586547, z: -0.048586547, w: 0.7054356}
+  m_LocalPosition: {x: 3.3281577, y: 3.79, z: -13.035244}
+  m_LocalScale: {x: 0.5, y: 0.5000001, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516651628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1070,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.13
   m_Center: {x: -0.01, y: -0.04, z: 0.15}
+--- !u!114 &1838050303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838050301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d854dc5ec7acf134789207d20579013c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 280270572}
 --- !u!4 &1838050305 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cd86f7651c0189e4b8dfde9abcd774a3, type: 3}

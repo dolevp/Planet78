@@ -10,7 +10,7 @@ public class AttackManager : MonoBehaviour {
 	public GameObject asteroidPrefab, smokeEffect;
 	public GameObject newAsteroid;
 	public GameObject oldAsteroid;
-	public Transform earth;
+	public Transform earth, rocketSpawn;
 	public float intervalBetweenAttacks = 5f;
 	bool isAttacking = false;
 
@@ -47,10 +47,13 @@ public class AttackManager : MonoBehaviour {
 		Asteroid asteroid = newAsteroid.GetComponent<Asteroid> ();
 		newFire = Instantiate (fireEffect, newAsteroid.transform.position, Quaternion.identity);
 		newFire.transform.SetParent (newAsteroid.transform);
+		//set asteroid variables
 		asteroid.earth = earth;
+		asteroid.spawnPosition = rocketSpawn;
 		asteroid.explosionEffect = smallExplosion;
 		asteroid.smokeEffect = smokeEffect;
 		asteroid.aManager = GetComponent<AttackManager> ();
+		//end
 		Physics.IgnoreCollision(newAsteroid.GetComponent<SphereCollider>(),oldAsteroid.GetComponent<SphereCollider>());
 
 //		navAgent = newAsteroid.GetComponent<NavMeshAgent> ();
