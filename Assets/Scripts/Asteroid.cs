@@ -18,7 +18,7 @@ public class Asteroid : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 
-		movementSpeed += aManager.score / 50;
+		movementSpeed += PlayerPrefs.GetInt("Score") / 50;
 
 		if (col.gameObject.tag == "Earth") {
 

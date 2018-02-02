@@ -14,8 +14,7 @@ public class AttackManager : MonoBehaviour {
 	public Transform earth, rocketSpawn;
 	public float intervalBetweenAttacks = 5f;
 	bool isAttacking = false;
-	public Text scoreText;
-	public int score = 0;
+	public Text scoreText, bestText;
 	public bool gameOver = false;
 
 	// Use this for initialization
@@ -41,10 +40,13 @@ public class AttackManager : MonoBehaviour {
 	public void AddScore(){
 
 
-		score++;
-		PlayerPrefs.SetInt ("Score", score);
-		scoreText.text = "score: " + score;
-		intervalBetweenAttacks -= score / 92;
+
+		PlayerPrefs.SetInt ("Score", PlayerPrefs.GetInt("Score") + 1);
+		scoreText.text = "score: " + PlayerPrefs.GetInt("Score");
+		intervalBetweenAttacks -= PlayerPrefs.GetInt ("Score") / 92;
+		if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt("Best"))
+			PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
+		bestText.text = "best: " + PlayerPrefs.GetInt ("Best").ToString();
 
 
 	}

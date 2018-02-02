@@ -11,23 +11,22 @@ public class StartPanel : MonoBehaviour {
 	public AttackManager aManager;
 	public GameObject earth;
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 
+		aManager.bestText.text = "best: " + PlayerPrefs.GetInt ("Best").ToString();
+
+		if(PlayerPrefs.GetInt("Score") > 0)
+			scoreFinishedText.text = "score: " + PlayerPrefs.GetInt("Score");
 		Time.timeScale = 0;
 		aManager.gameObject.SetActive (false);
-		if (PlayerPrefs.GetInt("GameOver") == 1) {
 
-			startText.text = "press anywhere to restart";
-			scoreFinishedText.gameObject.SetActive (true);
-			scoreFinishedText.text = "score: " + PlayerPrefs.GetInt ("Score");
-		}
+			
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (aManager.gameOver)
-			RestartGame ();
+	
 		
 		if(Input.GetMouseButtonDown(0)){
 
@@ -66,6 +65,7 @@ public class StartPanel : MonoBehaviour {
 		SceneManager.LoadScene (0);
 		restartText.gameObject.SetActive (true);
 		startText.gameObject.SetActive (false);
+
 
 
 

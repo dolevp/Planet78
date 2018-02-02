@@ -10,6 +10,7 @@ public class Earth : MonoBehaviour {
 	public Image sliderImage;
 	public GameObject panel;
 	public AttackManager aManager;
+	public StartPanel sPanel;
 	// Use this for initialization
 	void Start () {
 
@@ -25,11 +26,13 @@ public class Earth : MonoBehaviour {
 		
 		if (health <= 0) {
 			//Explode
-			PlayerPrefs.SetInt("GameOver", 1);
+			aManager.gameOver = true;
+			sPanel.RestartGame ();
 			gameObject.SetActive(false);
 		
 			Time.timeScale = 0;
 			panel.SetActive (true);
+
 
 		}
 	}
