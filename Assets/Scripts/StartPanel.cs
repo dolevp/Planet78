@@ -15,8 +15,12 @@ public class StartPanel : MonoBehaviour {
 
 		Time.timeScale = 0;
 		aManager.gameObject.SetActive (false);
-		scoreFinishedText.gameObject.SetActive (true);
-		scoreFinishedText.text = "score: " + PlayerPrefs.GetInt("Score");
+		if (PlayerPrefs.GetInt("GameOver") == 1) {
+
+			startText.text = "press anywhere to restart";
+			scoreFinishedText.gameObject.SetActive (true);
+			scoreFinishedText.text = "score: " + PlayerPrefs.GetInt ("Score");
+		}
 	}
 	
 	// Update is called once per frame

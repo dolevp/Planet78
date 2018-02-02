@@ -25,7 +25,7 @@ public class Earth : MonoBehaviour {
 		
 		if (health <= 0) {
 			//Explode
-			aManager.gameOver = true;
+			PlayerPrefs.SetInt("GameOver", 1);
 			gameObject.SetActive(false);
 		
 			Time.timeScale = 0;
