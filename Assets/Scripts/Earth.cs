@@ -12,7 +12,8 @@ public class Earth : MonoBehaviour {
 	public AttackManager aManager;
 	// Use this for initialization
 	void Start () {
-		
+
+		PlayerPrefs.SetInt ("Score", 0);
 	}
 
 	void OnCollisionEnter(Collision col){
