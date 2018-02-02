@@ -17,7 +17,7 @@ public class Earth : MonoBehaviour {
 
 		health--;
 		healthSlider.value--;
-		if (health <= 3)
+		if (health <= 2)
 			sliderImage.color = Color.red;
 		
 		if (health <= 0)
