@@ -8,6 +8,7 @@ public class Earth : MonoBehaviour {
 	public int health = 8;
 	public Slider healthSlider;
 	public Image sliderImage;
+	public GameObject panel;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +26,8 @@ public class Earth : MonoBehaviour {
 			Destroy(gameObject);
 		
 
+		panel.SetActive (true);
+		panel.GetComponentInChildren<Text> ().text = "destroyed";
 	}
 	
 	// Update is called once per frame
