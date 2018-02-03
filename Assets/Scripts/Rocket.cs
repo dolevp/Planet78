@@ -14,7 +14,7 @@ public class Rocket : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col){
 
-		Destroy (Instantiate (explosionPrefab, transform.position, Quaternion.identity), 1);
+		Destroy (Instantiate (explosionPrefab, transform.position, Quaternion.identity), 2.3f);
 		Destroy (col.gameObject);
 		Destroy (gameObject);
 		aManager.AddScore ();

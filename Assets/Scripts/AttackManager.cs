@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class AttackManager : MonoBehaviour {
 
 
-	public GameObject fireEffect, newFire, smallExplosion;
-	public GameObject asteroidPrefab, smokeEffect;
+	public GameObject fireEffect, newFire;
+	public GameObject asteroidPrefab;
 	public GameObject newAsteroid;
 	public GameObject oldAsteroid;
 	public Transform earth, rocketSpawn;
@@ -73,8 +73,6 @@ public class AttackManager : MonoBehaviour {
 			//set asteroid variables
 			asteroid.earth = earth;
 			asteroid.spawnPosition = rocketSpawn;
-			asteroid.explosionEffect = smallExplosion;
-			asteroid.smokeEffect = smokeEffect;
 			asteroid.aManager = GetComponent<AttackManager> ();
 			//end
 			Physics.IgnoreCollision (newAsteroid.GetComponent<SphereCollider> (), oldAsteroid.GetComponent<SphereCollider> ());
