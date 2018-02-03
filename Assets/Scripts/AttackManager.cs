@@ -12,7 +12,7 @@ public class AttackManager : MonoBehaviour {
 	public GameObject newAsteroid;
 	public GameObject oldAsteroid;
 	public Transform earth, rocketSpawn;
-	public float intervalBetweenAttacks = 5f;
+	public float intervalBetweenAttacks = 7f;
 	bool isAttacking = false;
 	public Text scoreText, bestText;
 	public bool gameOver = false;
