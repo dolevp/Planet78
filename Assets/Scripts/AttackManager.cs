@@ -16,12 +16,13 @@ public class AttackManager : MonoBehaviour {
 	bool isAttacking = false;
 	public Text scoreText, bestText;
 	public bool gameOver = false;
-
+	public int score,bestScore = 0;
 	// Use this for initialization
 	void Start () {
 
 
-
+		score = PlayerPrefs.GetInt ("Score");
+		bestScore = PlayerPrefs.GetInt ("Best");
 
 	}
 	
@@ -40,13 +41,15 @@ public class AttackManager : MonoBehaviour {
 	public void AddScore(){
 
 
+		score++;
 
-		PlayerPrefs.SetInt ("Score", PlayerPrefs.GetInt("Score") + 1);
-		scoreText.text = "score: " + PlayerPrefs.GetInt("Score");
-		intervalBetweenAttacks -= PlayerPrefs.GetInt ("Score") / 92;
-		if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt("Best"))
-			PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
-		bestText.text = "best: " + PlayerPrefs.GetInt ("Best").ToString();
+		scoreText.text = "score: " + score;
+		intervalBetweenAttacks -= score / 92;
+		if (score > bestScore)
+			bestText.text = "best: " + bestScore;
+
+
+
 
 
 	}
@@ -65,8 +68,8 @@ public class AttackManager : MonoBehaviour {
 			newAsteroid = Instantiate (asteroidPrefab, spawnPosition, Quaternion.identity);
 			oldAsteroid = newAsteroid;
 			Asteroid asteroid = newAsteroid.GetComponent<Asteroid> ();
-			newFire = Instantiate (fireEffect, newAsteroid.transform.position, Quaternion.identity);
-			newFire.transform.SetParent (newAsteroid.transform);
+//			newFire = Instantiate (fireEffect, newAsteroid.transform.position, Quaternion.identity);
+//			newFire.transform.SetParent (newAsteroid.transform);
 			//set asteroid variables
 			asteroid.earth = earth;
 			asteroid.spawnPosition = rocketSpawn;

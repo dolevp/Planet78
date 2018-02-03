@@ -10,9 +10,6 @@ public class Rocket : MonoBehaviour {
 	public AttackManager aManager;
 
 	// Use this for initialization
-	void Start () {
-		
-	}
 
 
 	void OnCollisionEnter (Collision col){

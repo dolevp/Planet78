@@ -11,8 +11,9 @@ public class Earth : MonoBehaviour {
 	public GameObject panel;
 	public AttackManager aManager;
 	public StartPanel sPanel;
+	public Text bestText;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		PlayerPrefs.SetInt ("Score", 0);
 	}
@@ -33,6 +34,11 @@ public class Earth : MonoBehaviour {
 			Time.timeScale = 0;
 			panel.SetActive (true);
 
+			PlayerPrefs.SetInt ("Score", aManager.score);
+
+			if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt("Best"))
+				PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
+			
 
 		}
 	}
