@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class StartPanel : MonoBehaviour {
 
-	public Text scoreText, restartText, startText, scoreFinishedText;
+	public Text scoreText, restartText, startText;
 	public GameObject slider;
 	public AttackManager aManager;
 	public GameObject earth;
 	// Use this for initialization
 	void OnEnable () {
 
-		aManager.bestText.text = "best: " + PlayerPrefs.GetInt ("Best").ToString();
 
-		if(PlayerPrefs.GetInt("Score") > 0)
-			scoreFinishedText.text = "score: " + PlayerPrefs.GetInt("Score");
+
+
 		Time.timeScale = 0;
 		aManager.gameObject.SetActive (false);
 
@@ -63,12 +62,6 @@ public class StartPanel : MonoBehaviour {
 	public void RestartGame(){
 
 		SceneManager.LoadScene (0);
-		restartText.gameObject.SetActive (true);
-		startText.gameObject.SetActive (false);
-
-
-
-
 
 
 	}

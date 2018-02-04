@@ -15,7 +15,7 @@ public class Earth : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 
-		PlayerPrefs.SetInt ("Score", 0);
+
 	}
 
 	void OnCollisionEnter(Collision col){

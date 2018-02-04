@@ -14,15 +14,15 @@ public class AttackManager : MonoBehaviour {
 	public Transform earth, rocketSpawn;
 	float intervalBetweenAttacks = 2.1f;
 	bool isAttacking = false;
-	public Text scoreText, bestText;
+	public Text scoreText;
 	public bool gameOver = false;
-	public int score,bestScore = 0;
+	public int score = 0;
 	// Use this for initialization
 	void Start () {
 
 
-		score = PlayerPrefs.GetInt ("Score");
-		bestScore = PlayerPrefs.GetInt ("Best");
+		score = 0;
+
 
 	}
 	
@@ -45,13 +45,6 @@ public class AttackManager : MonoBehaviour {
 
 		scoreText.text = "score: " + score;
 		intervalBetweenAttacks -= score / 92;
-		if (score > bestScore) {
-			bestScore = score;
-			bestText.text = "best: " + bestScore;
-
-		}
-
-
 
 
 
