@@ -7,7 +7,7 @@ public class Asteroid : MonoBehaviour {
 	public GameObject newExplosion, newRocket, rocketPrefab;
 	public bool hasBeenDestroyed;
 	public GameObject explosionEffect, smokeEffect;
-	public float movementSpeed = 0.7f;
+	float movementSpeed = 0.7f;
 	public Transform earth, spawnPosition;
 	public AttackManager aManager;
 	// Use this for initialization

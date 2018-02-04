@@ -36,8 +36,12 @@ public class Earth : MonoBehaviour {
 
 			PlayerPrefs.SetInt ("Score", aManager.score);
 
-			if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt("Best"))
+			if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt ("Best")) {
 				PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
+
+
+
+			}
 			
 
 		}
