@@ -17,14 +17,18 @@ public class Earth : MonoBehaviour {
 	public Animator anim;
 	private float fadeTime;
 	public LevelManager lManager;
-	public PlanetObject[] planets;
+	public GameObject[] planets;
 	public int currentPlanet = 0;
 	// Use this for initialization
-	void Awake(){
+	void Start(){
 
 
-		Instantiate (planets [currentPlanet]);
-		Destroy (gameObject);
+		GameObject newPlanet = planets [currentPlanet];
+		GetComponent<MeshFilter> () = newPlanet.GetComponent<MeshFilter> ();
+		GetComponent<MeshFilter> ().mesh = newPlanet.GetComponent<MeshFilter> ().mesh;
+
+
+
 
 
 		
@@ -82,6 +86,8 @@ public class Earth : MonoBehaviour {
 			lManager.BackToMenu ();
 		}
 	}
+
+
 
 
 
