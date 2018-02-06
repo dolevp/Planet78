@@ -23,6 +23,8 @@ public class LevelManager : MonoBehaviour {
 	IEnumerator FadeToMenu(){
 
 		anim.SetBool ("Fade", true);
+		anim.Play ("fadeOut");
+
 		yield return new WaitUntil (() => fadeImage.color.a == 1);
 		SceneManager.LoadScene (0);
 
