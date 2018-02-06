@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb0857088832154e8b56dd66ed84e32, type: 3}
+  m_Name: Earth
+  m_EditorClassIdentifier: 
+  planetName: Earth
+  cost: 0
+  howLooks: {fileID: 21300000, guid: 95ffceb95dd21664bb7be45b5deca449, type: 3}
+  planetPrefab: {fileID: 1425847014517958, guid: 996e461fbbe83424cbe78f1b8d60b3b7,
+    type: 2}

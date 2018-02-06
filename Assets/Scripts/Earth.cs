@@ -17,7 +17,19 @@ public class Earth : MonoBehaviour {
 	public Animator anim;
 	private float fadeTime;
 	public LevelManager lManager;
+	public PlanetObject[] planets;
+	public int currentPlanet = 0;
 	// Use this for initialization
+	void Awake(){
+
+
+		Instantiate (planets [currentPlanet]);
+		Destroy (gameObject);
+
+
+		
+	}
+
 	void Update () {
 
 		if (damaged) {

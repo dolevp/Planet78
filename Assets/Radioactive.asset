@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb0857088832154e8b56dd66ed84e32, type: 3}
+  m_Name: Radioactive
+  m_EditorClassIdentifier: 
+  planetName: Radioactive
+  cost: 1400
+  howLooks: {fileID: 21300000, guid: 2db10e788751bcd49bc2018cec2ca6a5, type: 3}
+  planetPrefab: {fileID: 1687870639432644, guid: a51681f2a2218024986287c4a1c79dce,
+    type: 2}

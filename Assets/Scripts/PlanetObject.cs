@@ -8,7 +8,7 @@ public class PlanetObject : ScriptableObject {
 
 	public string planetName = "Name Here";
 	public int cost;
-	public Image howLooks;
-	public Mesh mesh;
+	public Sprite howLooks;
+	public GameObject planetPrefab;
 
 }
