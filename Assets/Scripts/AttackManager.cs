@@ -21,7 +21,7 @@ public class AttackManager : MonoBehaviour {
 
 	void Awake(){
 
-		AddCash ();
+		cashText.text = "" + PlayerPrefs.GetInt ("Cash");
 
 
 	}
