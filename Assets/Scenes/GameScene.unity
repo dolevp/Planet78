@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireEffect: {fileID: 100000, guid: 756d99540142b5e4a8d174e18a6310d9, type: 2}
   newFire: {fileID: 0}
-  asteroidPrefab: {fileID: 1744727754605174, guid: 8b00922e11783374298299fad0d284af,
+  asteroidPrefab: {fileID: 1954362737755514, guid: 7b83baced56631e49b8197d934a0e0c4,
     type: 2}
   newAsteroid: {fileID: 0}
   oldAsteroid: {fileID: 0}
@@ -5625,6 +5625,41 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca4c580b3888314581688fa46fb142d, type: 2}
   m_IsPrefabParent: 0
@@ -5761,6 +5796,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
       propertyPath: m_TagString
+      value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+      propertyPath: m_Name
       value: Earth
       objectReference: {fileID: 0}
     m_RemovedComponents:

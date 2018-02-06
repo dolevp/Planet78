@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: cd86f7651c0189e4b8dfde9abcd774a3
-timeCreated: 1517500472
+guid: 6e8ceea4dd538c244bf26de854f37ea0
+timeCreated: 1517843536
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: LAND
-    2100002: SEA
-    2100004: ICE
+    2100000: Green
+    2100002: WATER
+    2100004: Material_001
+    2100006: ICE
+    2100008: Material_002
     2300000: //RootNode
     3300000: //RootNode
     4300000: Icosphere

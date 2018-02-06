@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 00acc78262f5fef41b1cb59dbac24d15
-timeCreated: 1517502257
+guid: d5c0916ebe4ceeb4088fd2f6f20c11d9
+timeCreated: 1517911953
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: GRAPHITE
-    2100002: MAGMA
+    2100000: stone
     2300000: //RootNode
     3300000: //RootNode
     4300000: Icosphere
@@ -69,7 +68,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -88,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
