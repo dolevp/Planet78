@@ -14,10 +14,18 @@ public class AttackManager : MonoBehaviour {
 	public Transform earth, rocketSpawn;
 	float intervalBetweenAttacks = 2.1f;
 	bool isAttacking = false;
-	public Text scoreText;
+	public Text scoreText, cashText;
 	public bool gameOver = false;
 	public int score = 0;
-	// Use this for initialization
+
+
+	void Awake(){
+
+		AddCash ();
+
+
+	}
+
 	void Start () {
 
 
@@ -47,6 +55,13 @@ public class AttackManager : MonoBehaviour {
 		intervalBetweenAttacks -= score / 92;
 
 
+
+	}
+
+	public void AddCash(){
+
+		PlayerPrefs.SetInt ("Cash", PlayerPrefs.GetInt ("Cash") + 1);
+		cashText.text = "" + PlayerPrefs.GetInt ("Cash");
 
 	}
 

@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 public class StartPanel : MonoBehaviour {
 
 	public Text scoreText, restartText, startText;
-	public GameObject slider;
+	public GameObject slider, money;
 	public AttackManager aManager;
-	public GameObject earth;
 	// Use this for initialization
 	void OnEnable () {
 
@@ -54,7 +53,7 @@ public class StartPanel : MonoBehaviour {
 		slider.SetActive (true);
 		Time.timeScale = 1;
 		aManager.gameObject.SetActive (true);
-
+		money.SetActive (true);
 
 
 	}

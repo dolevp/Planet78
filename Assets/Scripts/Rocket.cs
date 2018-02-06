@@ -18,6 +18,8 @@ public class Rocket : MonoBehaviour {
 		Destroy (col.gameObject);
 		Destroy (gameObject);
 		aManager.AddScore ();
+		aManager.AddCash ();
+		//play add cash animation
 
 	}
 	// Update is called once per frame
