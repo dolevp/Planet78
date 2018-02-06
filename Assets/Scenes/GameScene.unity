@@ -5948,6 +5948,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca4c580b3888314581688fa46fb142d, type: 2}
   m_IsPrefabParent: 0
@@ -6090,6 +6095,10 @@ Prefab:
       propertyPath: m_Name
       value: Earth
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100010, guid: 00ad524ae54b54740ab0014081fbe1ed, type: 3}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
