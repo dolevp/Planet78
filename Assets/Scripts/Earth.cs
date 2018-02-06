@@ -24,9 +24,10 @@ public class Earth : MonoBehaviour {
 
 
 		GameObject newPlanet = planets [currentPlanet];
-		GetComponent<MeshFilter> () = newPlanet.GetComponent<MeshFilter> ();
-		GetComponent<MeshFilter> ().mesh = newPlanet.GetComponent<MeshFilter> ().mesh;
 
+		GetComponent<MeshFilter> ().mesh = newPlanet.GetComponent<MeshFilter> ().sharedMesh;
+		GetComponent<Renderer> ().materials = newPlanet.GetComponent<Renderer> ().sharedMaterials;
+	
 
 
 
@@ -35,6 +36,10 @@ public class Earth : MonoBehaviour {
 	}
 
 	void Update () {
+
+
+
+	
 
 		if (damaged) {
 			

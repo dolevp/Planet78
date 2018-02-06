@@ -52,14 +52,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687870639432644}
-  m_LocalRotation: {x: 0.31077304, y: 0.72600865, z: -0.56757534, w: -0.23278728}
+  m_LocalRotation: {x: 0.649918, y: -0.03280816, z: -0.4392322, w: -0.61935884}
   m_LocalPosition: {x: 0.04, y: 2.92, z: -7.14}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4931225623984512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -317.2, y: -109.7, z: 77.2}
+  m_LocalEulerAnglesHint: {x: -416.5, y: -433.9, z: -245.3}
 --- !u!4 &4931225623984512
 Transform:
   m_ObjectHideFlags: 1
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693499103864490}
   m_LocalRotation: {x: -0.000000059604638, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.58, y: -2.88, z: 0.7}
+  m_LocalPosition: {x: -3.38, y: -1.63, z: -1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4109406146546272}
@@ -87,8 +87,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c59a794f291a6d844bd2bd27caa3fb27, type: 3}
-  - {fileID: 2100002, guid: c59a794f291a6d844bd2bd27caa3fb27, type: 3}
+  - {fileID: 2100000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+  - {fileID: 2100002, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+  - {fileID: 2100004, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+  - {fileID: 2100006, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
+  - {fileID: 2100008, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +117,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687870639432644}
-  m_Mesh: {fileID: 4300000, guid: c59a794f291a6d844bd2bd27caa3fb27, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6e8ceea4dd538c244bf26de854f37ea0, type: 3}
 --- !u!108 &108554841649497420
 Light:
   m_ObjectHideFlags: 1
@@ -174,11 +177,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   lManager: {fileID: 0}
   planets:
-  - {fileID: 11400000, guid: b3b3d8aaeaaf06149b315df773e3efa1, type: 2}
-  - {fileID: 11400000, guid: 6fe02ce322c10214ea68754665c9df56, type: 2}
-  - {fileID: 11400000, guid: 57f2b066bf32d99439a8017f11ec1d84, type: 2}
-  - {fileID: 11400000, guid: 78c2621f88fcb9f4eb20d12721b9c1b5, type: 2}
-  - {fileID: 11400000, guid: 37fef973a86090d4094000bddb241fba, type: 2}
+  - {fileID: 1425847014517958, guid: 996e461fbbe83424cbe78f1b8d60b3b7, type: 2}
+  - {fileID: 1010319436584766, guid: fba0ec22389e5f84ea76960645335418, type: 2}
+  - {fileID: 1510015333204840, guid: 4bfa7914600967c4bb3eb7c7c623f5ae, type: 2}
+  - {fileID: 1152316282033460, guid: 5b277ba78e76bae418986dc29af00ab8, type: 2}
+  - {fileID: 1687870639432644}
   currentPlanet: 0
 --- !u!135 &135471310922581996
 SphereCollider:
