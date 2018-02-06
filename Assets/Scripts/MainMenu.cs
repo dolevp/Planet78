@@ -9,15 +9,19 @@ public class MainMenu : MonoBehaviour {
 	public Text bestText;
 	public int score;
 	public Text scoreText;
+	public LevelManager lManager;
+
 
 	void Awake(){
 
 		bestText.text = "" + PlayerPrefs.GetInt ("Best");
 		scoreText.text = "" +  PlayerPrefs.GetInt ("Score");
 	}
+
+
 	public void StartGame(){
 
-		SceneManager.LoadScene (1);
+		lManager.GoToGame ();
 
 	}
 
@@ -25,4 +29,12 @@ public class MainMenu : MonoBehaviour {
 
 
 	}
+
+	public void Shop(){
+
+
+
+	}
+
+
 }

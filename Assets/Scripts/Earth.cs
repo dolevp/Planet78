@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Earth : MonoBehaviour {
 
@@ -12,16 +13,17 @@ public class Earth : MonoBehaviour {
 	public AttackManager aManager;
 	public StartPanel sPanel;
 	public bool damaged = false;
-	public Image hitImage;
+	public Image hitImage, fadeImage;
 	public Color flashColor;
 	public float flashSpeed = 3f;
-	public Fading fadeObject;
+	public Animator anim;
 	private float fadeTime;
+	public LevelManager lManager;
 	// Use this for initialization
 	void Update () {
 
 		if (damaged) {
-
+			
 
 
 			hitImage.color = flashColor;
@@ -45,9 +47,11 @@ public class Earth : MonoBehaviour {
 		
 		if (health <= 0) {
 			//Explode
-			fadeTime = fadeObject.BeginFade (-1);
-			StartCoroutine (WaitFade ());
-			sPanel.RestartGame ();
+
+
+
+		
+
 
 
 			aManager.gameOver = true;
@@ -65,16 +69,13 @@ public class Earth : MonoBehaviour {
 			}
 			
 
-
-
+			lManager.BackToMenu ();
 		}
 	}
 
-	IEnumerator WaitFade(){
 
-		yield return new WaitForSeconds (fadeTime + 2f);
 
-	}
+
 	
 
 }
