@@ -11,11 +11,12 @@ public class Earth : MonoBehaviour {
 	public GameObject panel;
 	public AttackManager aManager;
 	public StartPanel sPanel;
-	public Text bestText;
 	public bool damaged = false;
 	public Image hitImage;
 	public Color flashColor;
 	public float flashSpeed = 3f;
+	public Fading fadeObject;
+	private float fadeTime;
 	// Use this for initialization
 	void Update () {
 
@@ -44,9 +45,14 @@ public class Earth : MonoBehaviour {
 		
 		if (health <= 0) {
 			//Explode
-			aManager.gameOver = true;
+			fadeTime = fadeObject.BeginFade (1);
+			StartCoroutine (WaitFade ());
 			sPanel.RestartGame ();
-			gameObject.SetActive(false);
+
+
+			aManager.gameOver = true;
+
+
 		
 			Time.timeScale = 0;
 			panel.SetActive (true);
@@ -56,12 +62,18 @@ public class Earth : MonoBehaviour {
 			if (PlayerPrefs.GetInt ("Score") > PlayerPrefs.GetInt ("Best")) {
 				PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
 
-
-
 			}
 			
 
+
+
 		}
+	}
+
+	IEnumerator WaitFade(){
+
+		yield return new WaitForSeconds (fadeTime + 2f);
+
 	}
 	
 
