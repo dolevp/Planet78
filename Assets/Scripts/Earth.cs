@@ -45,7 +45,7 @@ public class Earth : MonoBehaviour {
 		
 		if (health <= 0) {
 			//Explode
-			fadeTime = fadeObject.BeginFade (1);
+			fadeTime = fadeObject.BeginFade (-1);
 			StartCoroutine (WaitFade ());
 			sPanel.RestartGame ();
 
