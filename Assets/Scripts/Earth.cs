@@ -12,14 +12,31 @@ public class Earth : MonoBehaviour {
 	public AttackManager aManager;
 	public StartPanel sPanel;
 	public Text bestText;
+	public bool damaged = false;
+	public Image hitImage;
+	public Color flashColor;
+	public float flashSpeed = 3f;
 	// Use this for initialization
-	void Awake () {
+	void Update () {
+
+		if (damaged) {
 
 
+
+			hitImage.color = flashColor;
+
+		} else {
+
+			hitImage.color = Color.Lerp (hitImage.color, Color.clear, flashSpeed * Time.deltaTime);
+
+		}
+
+		damaged = false;
 	}
 
 	void OnCollisionEnter(Collision col){
 
+		damaged = true;
 		health--;
 		healthSlider.value--;
 		if (health <= 2)
