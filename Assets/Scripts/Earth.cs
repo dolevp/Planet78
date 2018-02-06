@@ -11,7 +11,6 @@ public class Earth : MonoBehaviour {
 	public Image sliderImage;
 	public GameObject panel;
 	public AttackManager aManager;
-	public StartPanel sPanel;
 	public bool damaged = false;
 	public Image hitImage, fadeImage;
 	public Color flashColor;
