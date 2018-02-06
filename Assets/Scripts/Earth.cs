@@ -9,7 +9,6 @@ public class Earth : MonoBehaviour {
 	public int health = 8;
 	public Slider healthSlider;
 	public Image sliderImage;
-	public GameObject panel;
 	public AttackManager aManager;
 	public bool damaged = false;
 	public Image hitImage, fadeImage;
