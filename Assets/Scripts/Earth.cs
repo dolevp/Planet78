@@ -22,6 +22,7 @@ public class Earth : MonoBehaviour {
 	// Use this for initialization
 	void Start(){
 
+		currentPlanet = lManager.weaponNumber;
 
 		GameObject newPlanet = planets [currentPlanet];
 

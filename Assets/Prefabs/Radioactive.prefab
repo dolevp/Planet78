@@ -182,6 +182,12 @@ MonoBehaviour:
   - {fileID: 1510015333204840, guid: 4bfa7914600967c4bb3eb7c7c623f5ae, type: 2}
   - {fileID: 1152316282033460, guid: 5b277ba78e76bae418986dc29af00ab8, type: 2}
   - {fileID: 1687870639432644}
+  corePlanets:
+  - {fileID: 11400000, guid: b3b3d8aaeaaf06149b315df773e3efa1, type: 2}
+  - {fileID: 11400000, guid: 6fe02ce322c10214ea68754665c9df56, type: 2}
+  - {fileID: 11400000, guid: 57f2b066bf32d99439a8017f11ec1d84, type: 2}
+  - {fileID: 11400000, guid: 78c2621f88fcb9f4eb20d12721b9c1b5, type: 2}
+  - {fileID: 11400000, guid: 37fef973a86090d4094000bddb241fba, type: 2}
   currentPlanet: 0
 --- !u!135 &135471310922581996
 SphereCollider:

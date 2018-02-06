@@ -8,17 +8,10 @@ public class LevelManager : MonoBehaviour {
 
 
 	public Image fadeImage;
+	public int planetNumber;
 	public Animator anim;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 	IEnumerator FadeToMenu(){
 
