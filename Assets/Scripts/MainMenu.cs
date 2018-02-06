@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour {
 	void Awake(){
 
 		bestText.text = "best: " + PlayerPrefs.GetInt ("Best");
-		scoreText.text = "prev score: " + PlayerPrefs.GetInt ("Score");
+		scoreText.text = "score: " + PlayerPrefs.GetInt ("Score");
 	}
 	public void StartGame(){
 
