@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour {
 
 		anim.SetBool ("Fade", true);
 		yield return new WaitUntil (() => fadeImage.color.a == 1);
-		SceneManager.LoadScene (3);
+		SceneManager.LoadScene (2);
 
 
 	}
