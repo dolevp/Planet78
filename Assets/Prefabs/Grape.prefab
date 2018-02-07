@@ -52,14 +52,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1510015333204840}
-  m_LocalRotation: {x: -0.14750916, y: -0.09553467, z: -0.74843216, w: 0.6395026}
+  m_LocalRotation: {x: 0.040091697, y: -0.033640925, z: 0.7649946, w: -0.6419067}
   m_LocalPosition: {x: 0.04, y: 2.92, z: -7.14}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4485924969478374}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -160.63, y: -174, z: 80}
+  m_LocalEulerAnglesHint: {x: 180, y: -174, z: 80}
 --- !u!4 &4485924969478374
 Transform:
   m_ObjectHideFlags: 1
@@ -175,11 +175,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   lManager: {fileID: 0}
   planets:
-  - {fileID: 11400000, guid: b3b3d8aaeaaf06149b315df773e3efa1, type: 2}
-  - {fileID: 11400000, guid: 6fe02ce322c10214ea68754665c9df56, type: 2}
-  - {fileID: 11400000, guid: 57f2b066bf32d99439a8017f11ec1d84, type: 2}
-  - {fileID: 11400000, guid: 78c2621f88fcb9f4eb20d12721b9c1b5, type: 2}
-  - {fileID: 11400000, guid: 37fef973a86090d4094000bddb241fba, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPlanet: 0
 --- !u!135 &135721910038441682
 SphereCollider:

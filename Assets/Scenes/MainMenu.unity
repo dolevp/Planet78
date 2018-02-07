@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 836133170}
   - component: {fileID: 836133173}
   m_Layer: 0
-  m_Name: Image
+  m_Name: BlackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

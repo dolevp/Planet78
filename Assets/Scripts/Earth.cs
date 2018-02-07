@@ -19,10 +19,11 @@ public class Earth : MonoBehaviour {
 	public LevelManager lManager;
 	public GameObject[] planets;
 	public int currentPlanet = 0;
+
 	// Use this for initialization
 	void Start(){
 
-		currentPlanet = lManager.planetNumber;
+		currentPlanet = PlayerPrefs.GetInt ("Current");
 
 		GameObject newPlanet = planets [currentPlanet];
 

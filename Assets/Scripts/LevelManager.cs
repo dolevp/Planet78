@@ -8,11 +8,16 @@ public class LevelManager : MonoBehaviour {
 
 
 	public Image fadeImage;
-	public int planetNumber;
 	public Animator anim;
 
 
 
+	void Start(){
+
+		fadeImage = GameObject.Find ("BlackImage").GetComponent<Image>();
+		anim = fadeImage.GetComponent<Animator> ();
+
+	}
 	IEnumerator FadeToMenu(){
 
 		anim.SetBool ("Fade", true);

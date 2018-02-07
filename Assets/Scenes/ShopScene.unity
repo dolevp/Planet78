@@ -378,12 +378,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7051cc3f1c2f4e8e81d79f2ea93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lManager: {fileID: 1913710569}
+  lManager: {fileID: 0}
   sController: {fileID: 1313159689}
   planetNumber: 0
   cost: {fileID: 730060300}
   planetName: {fileID: 564696601}
   buttonText: {fileID: 444205359}
+  cashText: {fileID: 755648443}
   image: {fileID: 865585014}
 --- !u!1 &247582662
 GameObject:
@@ -582,12 +583,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7051cc3f1c2f4e8e81d79f2ea93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lManager: {fileID: 1913710569}
+  lManager: {fileID: 0}
   sController: {fileID: 1313159689}
   planetNumber: 2
   cost: {fileID: 824023993}
   planetName: {fileID: 247582664}
   buttonText: {fileID: 1680785374}
+  cashText: {fileID: 755648443}
   image: {fileID: 1335323062}
 --- !u!1 &324444232
 GameObject:
@@ -673,12 +675,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7051cc3f1c2f4e8e81d79f2ea93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lManager: {fileID: 1913710569}
+  lManager: {fileID: 0}
   sController: {fileID: 1313159689}
   planetNumber: 3
   cost: {fileID: 1554277330}
   planetName: {fileID: 1204863673}
   buttonText: {fileID: 98440576}
+  cashText: {fileID: 755648443}
   image: {fileID: 1786976797}
 --- !u!1 &370090624
 GameObject:
@@ -755,7 +758,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 370090627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 311071700}
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &370090627
@@ -866,7 +880,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 407311573}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101807244}
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &407311573
@@ -1154,7 +1179,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 468920926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 356929146}
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &468920926
@@ -1339,7 +1375,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504290327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1845830321}
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &504290327
@@ -1424,12 +1471,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7051cc3f1c2f4e8e81d79f2ea93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lManager: {fileID: 1913710569}
+  lManager: {fileID: 0}
   sController: {fileID: 1313159689}
   planetNumber: 1
   cost: {fileID: 1030168578}
   planetName: {fileID: 904063901}
   buttonText: {fileID: 261827131}
+  cashText: {fileID: 755648443}
   image: {fileID: 457566253}
 --- !u!1 &528198148
 GameObject:
@@ -1614,6 +1662,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 564696599}
+--- !u!1 &611153640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 611153642}
+  - component: {fileID: 611153641}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &611153641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611153640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcb49c14e6bec441963f2300ad81c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeImage: {fileID: 2098935981}
+  anim: {fileID: 2098935978}
+--- !u!4 &611153642
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611153640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 581.0841, y: 165.70563, z: 434.42242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701922591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1779,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1913710569}
+      - m_Target: {fileID: 611153641}
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -3471,12 +3561,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7051cc3f1c2f4e8e81d79f2ea93ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lManager: {fileID: 1913710569}
+  lManager: {fileID: 0}
   sController: {fileID: 1313159689}
   planetNumber: 4
   cost: {fileID: 81595621}
   planetName: {fileID: 1920578854}
   buttonText: {fileID: 1072548710}
+  cashText: {fileID: 755648443}
   image: {fileID: 47418372}
 --- !u!1 &1889767826
 GameObject:
@@ -3579,49 +3670,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1913710568
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1913710570}
-  - component: {fileID: 1913710569}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1913710569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1913710568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcb49c14e6bec441963f2300ad81c16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 2098935981}
-  planetNumber: 0
-  anim: {fileID: 2098935978}
---- !u!4 &1913710570
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1913710568}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 581.0841, y: 165.70563, z: 434.42242}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1920578852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,7 +3917,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2067085498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 522632293}
+        m_MethodName: PurchaseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2067085498
@@ -3917,7 +3976,7 @@ GameObject:
   - component: {fileID: 2098935981}
   - component: {fileID: 2098935978}
   m_Layer: 0
-  m_Name: Image
+  m_Name: BlackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
