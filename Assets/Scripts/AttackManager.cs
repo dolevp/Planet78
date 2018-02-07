@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms; 
 
 public class AttackManager : MonoBehaviour {
 
@@ -66,8 +68,33 @@ public class AttackManager : MonoBehaviour {
 		}
 		if (colorIndex == backgroundColors.Length - 1)
 			colorIndex = 0;
+		
+		if (score >= 50)
+			Social.ReportProgress ("CgkI1KCwvoQTEAIQAg", 100.0f, (bool success) => {
+
+
+			});
+
+		if (score >= 100)
+			Social.ReportProgress ("CgkI1KCwvoQTEAIQAw", 100.0f, (bool success) => {
+
+
+			});
+
+		if (score >= 200)
+			Social.ReportProgress ("CgkI1KCwvoQTEAIQBA", 100.0f, (bool success) => {
+
+
+			});
+		if (score >= 500)
+			Social.ReportProgress ("CgkI1KCwvoQTEAIQBQ", 100.0f, (bool success) => {
+
+
+			});
 
 	}
+
+
 
 	public void AddCash(){
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 
 public class StoreObject : MonoBehaviour {
 
@@ -42,14 +44,31 @@ public class StoreObject : MonoBehaviour {
 	public void PurchaseItem(){
 		
 
-		if (PlayerPrefs.GetInt ("Cash") >= sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt(sController.corePlanets[planetNumber].name) == 0) {
+		if (PlayerPrefs.GetInt ("Cash") >= sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 0) {
+			//buy this planet
 
+			if (planetNumber != 0) {
+				Social.ReportProgress ("CgkI1KCwvoQTEAIQAQ", 100.0f, (bool success) => {
+					// handle success or failure
+				});
+			}
+			if (planetNumber == 4) {
+
+				Social.ReportProgress ("CgkI1KCwvoQTEAIQBg", 100.0f, (bool success) => {
+
+
+				});
+
+			}
+				
+	
 			PlayerPrefs.SetInt ("Cash", PlayerPrefs.GetInt ("Cash") - sController.corePlanets [planetNumber].cost);
 			PlayerPrefs.SetInt (sController.corePlanets [planetNumber].name, 1);
 			PlayerPrefs.SetInt ("Current", planetNumber);
 
 
 		}
+		//make sure to equip it
 		if (PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 1) {
 			
 			PlayerPrefs.SetInt ("Current", planetNumber);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms;
+using GooglePlayGames;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
@@ -43,6 +45,21 @@ public class LevelManager : MonoBehaviour {
 		anim.SetBool ("Fade", true);
 		yield return new WaitUntil (() => fadeImage.color.a == 1);
 		SceneManager.LoadScene (2);
+
+
+	}
+
+	public void GoLeaderboard(){
+
+
+		Social.ShowLeaderboardUI ();
+
+
+	}
+
+	public void GoAchievements(){
+
+		Social.ShowAchievementsUI ();
 
 
 	}

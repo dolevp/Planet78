@@ -71,9 +71,6 @@ public class Earth : MonoBehaviour {
 
 
 
-		
-
-
 
 			aManager.gameOver = true;
 
@@ -88,7 +85,10 @@ public class Earth : MonoBehaviour {
 				PlayerPrefs.SetInt ("Best", PlayerPrefs.GetInt ("Score"));
 
 			}
-			
+
+			Social.ReportScore(PlayerPrefs.GetInt("Score"), "CgkI1KCwvoQTEAIQBw", (bool success) => {
+				// handle success or failure
+			});
 
 			lManager.BackToMenu ();
 		}
