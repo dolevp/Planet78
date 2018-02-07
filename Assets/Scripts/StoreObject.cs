@@ -10,7 +10,7 @@ public class StoreObject : MonoBehaviour {
 	public ShopController sController;
 	public int planetNumber;
 
-	public Text cost,planetName;
+	public Text cost,planetName, buttonText;
 	public Image image;
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,12 @@ public class StoreObject : MonoBehaviour {
 
 	void SetObject(){
 
-
+		buttonText.text = "purchase";
+		if (PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 1)
+			buttonText.text = "equip";
+		if(lManager.planetNumber == planetNumber)
+			//its this planet
+			buttonText.text = "equipped";
 		planetName.text = sController.corePlanets [planetNumber].name;
 		cost.text = "" + sController.corePlanets [planetNumber].cost;
 		image.sprite = sController.corePlanets [planetNumber].howLooks;
@@ -29,13 +34,15 @@ public class StoreObject : MonoBehaviour {
 
 
 	public void PurchaseItem(){
+		
 
-		if (PlayerPrefs.GetInt ("Cash") >= sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt(planetName) == 0) {
+		if (PlayerPrefs.GetInt ("Cash") >= sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt(sController.corePlanets[planetNumber].name) == 0) {
 
 			PlayerPrefs.SetInt ("Cash", PlayerPrefs.GetInt ("Cash") - sController.corePlanets [planetNumber].cost);
+			PlayerPrefs.SetInt (sController.corePlanets [planetNumber].name, 1);
 			lManager.planetNumber = planetNumber;
 		}
-		if (PlayerPrefs.GetInt (planetName) == 1)
+		if (PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 1)
 			lManager.planetNumber = planetNumber;
 
 

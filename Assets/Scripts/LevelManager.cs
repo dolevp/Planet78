@@ -33,6 +33,15 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
+	IEnumerator FadeToShop(){
+
+		anim.SetBool ("Fade", true);
+		yield return new WaitUntil (() => fadeImage.color.a == 1);
+		SceneManager.LoadScene (3);
+
+
+	}
+
 	public void BackToMenu(){
 
 		StartCoroutine(FadeToMenu());
@@ -43,5 +52,11 @@ public class LevelManager : MonoBehaviour {
 
 		StartCoroutine(FadeToGame());
 
+	}
+
+	public void GoShopping(){
+
+
+		StartCoroutine(FadeToShop());
 	}
 }
