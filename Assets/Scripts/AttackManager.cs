@@ -17,7 +17,7 @@ public class AttackManager : MonoBehaviour {
 	public Text scoreText, cashText;
 	public bool gameOver = false;
 	public int score = 0;
-
+	public Animator cashAnim;
 
 	void Awake(){
 
@@ -62,7 +62,7 @@ public class AttackManager : MonoBehaviour {
 
 		PlayerPrefs.SetInt ("Cash", PlayerPrefs.GetInt ("Cash") + 1);
 		cashText.text = "" + PlayerPrefs.GetInt ("Cash");
-
+		cashAnim.Play ("beat");
 	}
 
 	IEnumerator Attack(){
