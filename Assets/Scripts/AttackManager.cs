@@ -17,7 +17,10 @@ public class AttackManager : MonoBehaviour {
 	public Text scoreText, cashText;
 	public bool gameOver = false;
 	public int score = 0;
-	public Animator cashAnim;
+	public Animator cashAnim; 
+	public Color[] backgroundColors;
+	int colorIndex = 0;
+	public Camera cam;
 
 	void Awake(){
 
@@ -30,6 +33,7 @@ public class AttackManager : MonoBehaviour {
 
 
 		score = 0;
+		cam.clearFlags = CameraClearFlags.SolidColor;
 
 
 	}
@@ -41,7 +45,7 @@ public class AttackManager : MonoBehaviour {
 		if (!isAttacking)
 			StartCoroutine (Attack ());
 
-
+		cam.backgroundColor = Color.Lerp (cam.backgroundColor, backgroundColors [colorIndex], 1.1f * Time.deltaTime);
 
 		
 	}
@@ -54,7 +58,14 @@ public class AttackManager : MonoBehaviour {
 		scoreText.text = "score: " + score;
 		intervalBetweenAttacks -= score / 92;
 
+		if(score % 25 == 0) {
+			
+			colorIndex++;
 
+
+		}
+		if (colorIndex == backgroundColors.Length - 1)
+			colorIndex = 0;
 
 	}
 
