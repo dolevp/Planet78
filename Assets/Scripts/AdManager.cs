@@ -27,6 +27,7 @@ public class AdManager : MonoBehaviour {
 		this.rewardVideo = RewardBasedVideoAd.Instance;
 
 		rewardVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
+	
 
 		this.RequestVideo ();
 
@@ -57,14 +58,14 @@ public class AdManager : MonoBehaviour {
 	{
 		string type = "Cash";
 		double amount = 35.0f;
-		MonoBehaviour.print(
-			"User rewarded with: "
-			+ amount.ToString() + " " + type);
+	
 
 		PlayerPrefs.SetInt ("Cash", PlayerPrefs.GetInt ("Cash") + 35);
 		cashAnim.Play ("GetCashFromAd");
 		cashText.text = "" + PlayerPrefs.GetInt ("Cash");
 	}
+
+
 
 	private void RequestVideo(){
 
