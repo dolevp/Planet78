@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.Analytics;
 
 public class StoreObject : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class StoreObject : MonoBehaviour {
 
 	public Text cost,planetName, buttonText, cashText;
 	public Image image;
+	public 
 	// Use this for initialization
 	void Start () {
 
@@ -66,6 +68,7 @@ public class StoreObject : MonoBehaviour {
 			PlayerPrefs.SetInt (sController.corePlanets [planetNumber].name, 1);
 			PlayerPrefs.SetInt ("Current", planetNumber);
 
+			Analytics.CustomEvent ("PurchasedPlanet" + planetName.text);
 
 		}
 		//make sure to equip it
@@ -73,6 +76,7 @@ public class StoreObject : MonoBehaviour {
 			
 			PlayerPrefs.SetInt ("Current", planetNumber);
 
+			Analytics.CustomEvent ("EquippedPlanet" + planetName.text);
 
 
 		}
