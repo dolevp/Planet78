@@ -11,6 +11,10 @@ public class LevelManager : MonoBehaviour {
 
 	public Image fadeImage;
 	public Animator anim;
+	public string appID = "ca-app-pub-6666466886819761~6891740827";
+	public string cashVideoId = "ca-app-pub-6666466886819761/7942287983";
+	public string gameOverAd = "ca-app-pub-6666466886819761/3873505875";
+	public Animator cashAnim;
 
 
 
@@ -18,6 +22,7 @@ public class LevelManager : MonoBehaviour {
 
 		fadeImage = GameObject.Find ("BlackImage").GetComponent<Image>();
 		anim = fadeImage.GetComponent<Animator> ();
+
 
 	}
 	IEnumerator FadeToMenu(){
@@ -73,6 +78,12 @@ public class LevelManager : MonoBehaviour {
 
 		});
 		
+
+
+	}
+
+	public void GameOverAd(){
+
 
 
 	}
