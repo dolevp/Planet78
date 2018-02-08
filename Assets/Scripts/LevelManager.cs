@@ -52,14 +52,27 @@ public class LevelManager : MonoBehaviour {
 	public void GoLeaderboard(){
 
 
-		Social.ShowLeaderboardUI ();
+		Social.localUser.Authenticate((bool success) => {
+			// handle success or failure
+
+			if(success)
+				Social.ShowLeaderboardUI ();
+		});
+		
 
 
 	}
 
 	public void GoAchievements(){
 
-		Social.ShowAchievementsUI ();
+		Social.localUser.Authenticate((bool success) => {
+			// handle success or failure
+
+			if(success)
+				Social.ShowAchievementsUI ();
+
+		});
+		
 
 
 	}

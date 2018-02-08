@@ -28,7 +28,6 @@ public static class PlanetResources
         public const string leaderboard_taking_the_lead = "CgkI1KCwvoQTEAIQBw"; // <GPGSID>
         public const string achievement_intermediate = "CgkI1KCwvoQTEAIQAw"; // <GPGSID>
         public const string achievement_customer = "CgkI1KCwvoQTEAIQAQ"; // <GPGSID>
-        public const string achievement_crush_em = "CgkI1KCwvoQTEAIQCA"; // <GPGSID>
         public const string achievement_beginner = "CgkI1KCwvoQTEAIQAg"; // <GPGSID>
         public const string achievement_meteor_buster = "CgkI1KCwvoQTEAIQBQ"; // <GPGSID>
         public const string achievement_toxic = "CgkI1KCwvoQTEAIQBg"; // <GPGSID>
