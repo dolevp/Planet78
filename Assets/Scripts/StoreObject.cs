@@ -19,7 +19,6 @@ public class StoreObject : MonoBehaviour {
 
 
 		SetObject ();
-
 	}
 
 	void SetObject(){

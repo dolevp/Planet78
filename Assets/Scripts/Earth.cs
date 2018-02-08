@@ -93,7 +93,7 @@ public class Earth : MonoBehaviour {
 
 			lManager.BackToMenu ();
 			//show ad
-			adManager.ShowInterstitial();
+			adManager.ShowInter();
 		}
 	}
 
