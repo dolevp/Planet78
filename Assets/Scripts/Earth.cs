@@ -19,6 +19,7 @@ public class Earth : MonoBehaviour {
 	public LevelManager lManager;
 	public GameObject[] planets;
 	public int currentPlanet = 0;
+	public AdManager adManager;
 
 	// Use this for initialization
 	void Start(){
@@ -30,7 +31,7 @@ public class Earth : MonoBehaviour {
 		GetComponent<MeshFilter> ().mesh = newPlanet.GetComponent<MeshFilter> ().sharedMesh;
 		GetComponent<Renderer> ().materials = newPlanet.GetComponent<Renderer> ().sharedMaterials;
 	
-
+		adManager = GameObject.Find ("AdManager").GetComponent<AdManager>();
 
 
 
@@ -91,6 +92,8 @@ public class Earth : MonoBehaviour {
 			});
 
 			lManager.BackToMenu ();
+			//show ad
+			adManager.ShowInterstitial();
 		}
 	}
 
