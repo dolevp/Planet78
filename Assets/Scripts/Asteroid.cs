@@ -7,7 +7,7 @@ public class Asteroid : MonoBehaviour {
 	public GameObject newExplosion, newRocket, rocketPrefab;
 	public bool hasBeenDestroyed;
 	public GameObject explosionEffect, smokeEffect;
-	float movementSpeed = 0.7f;
+	public float movementSpeed = 0.7f;
 	public Transform earth, spawnPosition;
 	public AttackManager aManager;
 	// Use this for initialization
@@ -18,12 +18,14 @@ public class Asteroid : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 
-		movementSpeed += aManager.score / 45;
 
 		if (col.gameObject.tag == "Earth") {
 
+			GameObject myExplosion;
+			myExplosion = Instantiate (explosionEffect, transform.position, Quaternion.identity);
+			myExplosion.transform.localScale = new Vector3 (0.05f, 0.05f, 0.05f);
+			Destroy (myExplosion, 1.2f);
 
-			Destroy (Instantiate (explosionEffect, transform.position, Quaternion.identity), 1);
 
 			Instantiate (smokeEffect, transform.position, Quaternion.identity);
 

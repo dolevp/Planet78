@@ -58,8 +58,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191186}
   m_LocalRotation: {x: -0.7008359, y: 0, z: 0, w: 0.7133226}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.35, y: 4.92, z: -8.96}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children:
   - {fileID: 462712}
   - {fileID: 452148}
@@ -152,7 +152,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1171090994
+  randomSeed: -224808352
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3463,7 +3463,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.1
+    scalar: 0.07
     minScalar: 0.1
     maxCurve:
       serializedVersion: 2
@@ -3503,8 +3503,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 2
-  randomSeed: 1862160032
+  scalingMode: 0
+  randomSeed: -433494719
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3632,8 +3632,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.05
-      minScalar: 0.05
+      scalar: 0.005
+      minScalar: 0.005
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3864,7 +3864,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 40
+    maxNumParticles: 15
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -3919,7 +3919,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.3, y: 0.3, z: 0.3}
+    m_Scale: {x: 0.09, y: 0.09, z: 0.09}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -4159,8 +4159,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.6
-      minScalar: 0.10000001
+      scalar: 0.05
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6820,7 +6820,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1348384309
+  randomSeed: -1622718315
   InitialModule:
     serializedVersion: 3
     enabled: 1

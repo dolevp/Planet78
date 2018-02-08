@@ -14,7 +14,7 @@ public class AttackManager : MonoBehaviour {
 	public GameObject newAsteroid;
 	public GameObject oldAsteroid;
 	public Transform earth, rocketSpawn;
-	float intervalBetweenAttacks = 2.1f;
+	float intervalBetweenAttacks = 1.7f;
 	bool isAttacking = false;
 	public Text scoreText, cashText;
 	public bool gameOver = false;
@@ -58,16 +58,22 @@ public class AttackManager : MonoBehaviour {
 		score++;
 
 		scoreText.text = "score: " + score;
-		intervalBetweenAttacks -= score / 92;
+
 
 		if(score % 25 == 0) {
 			
 			colorIndex++;
 
 
+
 		}
+		if(score % 20 == 0)
+			intervalBetweenAttacks -= Mathf.Round(score) / 187;
 		if (colorIndex == backgroundColors.Length - 1)
 			colorIndex = 0;
+
+		if (score >= 25)
+			intervalBetweenAttacks = 1f;
 		
 		if (score >= 50)
 			Social.ReportProgress ("CgkI1KCwvoQTEAIQAg", 100.0f, (bool success) => {
@@ -123,6 +129,8 @@ public class AttackManager : MonoBehaviour {
 			asteroid.earth = earth;
 			asteroid.spawnPosition = rocketSpawn;
 			asteroid.aManager = GetComponent<AttackManager> ();
+			asteroid.movementSpeed += Mathf.Round(score) / 110;
+
 			//end
 			Physics.IgnoreCollision (newAsteroid.GetComponent<SphereCollider> (), oldAsteroid.GetComponent<SphereCollider> ());
 
