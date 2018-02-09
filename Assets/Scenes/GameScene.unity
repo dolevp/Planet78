@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedc0b6c0f3cc7e4489060590a245b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earth: {fileID: 0}
+  earth: {fileID: 1442920739}
   anim: {fileID: 0}
 --- !u!1 &515955365
 GameObject:
@@ -1427,6 +1427,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1442920739 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114780985750011814, guid: a51681f2a2218024986287c4a1c79dce,
+    type: 2}
+  m_PrefabInternal: {fileID: 186352787}
+  m_Script: {fileID: 11500000, guid: d854dc5ec7acf134789207d20579013c, type: 3}
 --- !u!1 &1516651628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1533,6 @@ MonoBehaviour:
   appID: ca-app-pub-6666466886819761~6891740827
   cashVideoId: ca-app-pub-6666466886819761/7942287983
   gameOverAd: ca-app-pub-6666466886819761/3873505875
-  cashAnim: {fileID: 0}
 --- !u!4 &1691299348
 Transform:
   m_ObjectHideFlags: 0
@@ -5871,6 +5876,41 @@ Prefab:
         type: 2}
       propertyPath: m_MaxParticleSize
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198000011337858710, guid: 5ca4c580b3888314581688fa46fb142d,
         type: 2}

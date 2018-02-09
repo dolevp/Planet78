@@ -27,7 +27,7 @@ public class Asteroid : MonoBehaviour {
 			Destroy (myExplosion, 1.2f);
 
 
-			Instantiate (smokeEffect, transform.position, Quaternion.identity);
+			Destroy(Instantiate (smokeEffect, transform.position, Quaternion.identity), 4.6f);
 
 			Destroy (gameObject);
 			hasBeenDestroyed = true;

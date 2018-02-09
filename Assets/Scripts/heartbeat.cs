@@ -16,6 +16,6 @@ public class heartbeat : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		anim.speed += 0.006f * Time.deltaTime;
+		anim.speed += 0.0093f * Time.deltaTime;
 	}
 }

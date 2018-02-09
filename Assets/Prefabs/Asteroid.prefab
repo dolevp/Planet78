@@ -214,7 +214,8 @@ MonoBehaviour:
     type: 2}
   hasBeenDestroyed: 0
   explosionEffect: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 2}
-  smokeEffect: {fileID: 100000, guid: ab1112643ee572748b01dede71158272, type: 2}
+  smokeEffect: {fileID: 100000, guid: 5b6c2f68addb63847b151f0d41a9d3b1, type: 2}
+  movementSpeed: 0.7
   earth: {fileID: 0}
   spawnPosition: {fileID: 0}
   aManager: {fileID: 0}
