@@ -33,7 +33,11 @@ public class PlayServicesManager : MonoBehaviour {
 		PlayGamesPlatform.Activate();
 
 
+		Social.localUser.Authenticate((bool success) => {
 
+
+
+		});
 
 
 
