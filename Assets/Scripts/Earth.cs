@@ -20,6 +20,7 @@ public class Earth : MonoBehaviour {
 	public GameObject[] planets;
 	public int currentPlanet = 0;
 	public AdManager adManager;
+	public AudioSource explosionAudio;
 
 	// Use this for initialization
 	void Start(){
@@ -70,7 +71,7 @@ public class Earth : MonoBehaviour {
 		if (health <= 0) {
 			//Explode
 
-
+			explosionAudio.Play ();
 
 
 			aManager.gameOver = true;
