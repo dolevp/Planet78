@@ -15,12 +15,13 @@ public class StoreObject : MonoBehaviour {
 
 	public Text cost,planetName, buttonText, cashText;
 	public Image image;
-	public 
+	public AudioSource notEnough, purchase, equip;
 	// Use this for initialization
 	void Start () {
 
 
 		SetObject ();
+
 	}
 
 	void SetObject(){
@@ -70,6 +71,14 @@ public class StoreObject : MonoBehaviour {
 
 			Analytics.CustomEvent ("PurchasedPlanet" + planetName.text);
 
+			purchase.Play ();
+
+		}
+
+		if (PlayerPrefs.GetInt ("Cash") < sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 0) {
+			//not enough money, bruh!
+			notEnough.Play();
+
 		}
 		//make sure to equip it
 		if (PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 1) {
@@ -78,7 +87,7 @@ public class StoreObject : MonoBehaviour {
 
 			Analytics.CustomEvent ("EquippedPlanet" + planetName.text);
 
-
+			equip.Play ();
 		}
 
 
