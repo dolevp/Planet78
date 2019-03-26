@@ -26,7 +26,7 @@ public class AttackManager : MonoBehaviour {
 
 	void Awake(){
 
-		cashText.text = "" + PlayerPrefs.GetInt ("Cash");
+        cashText.text = "" + PlayerPrefs.GetInt ("Cash");
 
 
 	}
@@ -60,7 +60,7 @@ public class AttackManager : MonoBehaviour {
 		scoreText.text = "score: " + score;
 
 
-		if(score % 25 == 0) {
+		if(score % 10 == 0) {
 			
 			colorIndex++;
 

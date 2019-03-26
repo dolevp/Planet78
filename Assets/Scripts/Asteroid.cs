@@ -6,6 +6,7 @@ public class Asteroid : MonoBehaviour {
 
 	public GameObject newExplosion, newRocket, rocketPrefab;
 	public bool hasBeenDestroyed;
+    public bool hasPressed = false;
 	public GameObject explosionEffect, smokeEffect;
 	public float movementSpeed = 0.7f;
 	public Transform earth, spawnPosition;
@@ -25,10 +26,7 @@ public class Asteroid : MonoBehaviour {
 			myExplosion = Instantiate (explosionEffect, transform.position, Quaternion.identity);
 			myExplosion.transform.localScale = new Vector3 (0.05f, 0.05f, 0.05f);
 			Destroy (myExplosion, 1.2f);
-
-
-			Destroy(Instantiate (smokeEffect, transform.position, Quaternion.identity), 4.6f);
-
+            Instantiate(smokeEffect, col.contacts[0].point, Quaternion.identity);
 			Destroy (gameObject);
 			hasBeenDestroyed = true;
 //			StartCoroutine (WaitAndDestroy ());
@@ -41,14 +39,17 @@ public class Asteroid : MonoBehaviour {
 
 	void OnMouseDown(){
 
-		newRocket = Instantiate (rocketPrefab, spawnPosition.position, rocketPrefab.transform.rotation);
-		//set the target variable
-		newRocket.GetComponent<Rocket> ().rocketTarget = transform;
-		//set the explosion effect variable
-		newRocket.GetComponent<Rocket> ().explosionPrefab = explosionEffect;
-		//set attackmanager variable
-		newRocket.GetComponent<Rocket>().aManager = aManager;
-
+        if (!hasPressed)
+        {
+            newRocket = Instantiate(rocketPrefab, spawnPosition.position, rocketPrefab.transform.rotation);
+            //set the target variable
+            newRocket.GetComponent<Rocket>().rocketTarget = transform;
+            //set the explosion effect variable
+            newRocket.GetComponent<Rocket>().explosionPrefab = explosionEffect;
+            //set attackmanager variable
+            newRocket.GetComponent<Rocket>().aManager = aManager;
+            hasPressed = true;
+        }
 
 	}
 

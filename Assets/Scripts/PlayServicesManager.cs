@@ -18,7 +18,7 @@ public class PlayServicesManager : MonoBehaviour {
 
 
 
-		PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
+		/*PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
 			// enables saving game progress.
 
 
@@ -38,7 +38,7 @@ public class PlayServicesManager : MonoBehaviour {
 
 
 		});
-
+        */
 
 
 	}

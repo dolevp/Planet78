@@ -75,7 +75,8 @@ public class StoreObject : MonoBehaviour {
 
 		}
 
-		if (PlayerPrefs.GetInt ("Cash") < sController.corePlanets [planetNumber].cost && PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 0) {
+		if (PlayerPrefs.GetInt ("Cash") < sController.corePlanets [planetNumber].cost &&
+            PlayerPrefs.GetInt (sController.corePlanets [planetNumber].name) == 0) {
 			//not enough money, bruh!
 			notEnough.Play();
 
